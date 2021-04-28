@@ -8,23 +8,34 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>To Do List</h1>
+    <!-- <p>Add and delete tasks, prioritize with color codes, and mark as completed.</p> -->
+  </header>
   <div class="container">
-    <header>
-      <h1>To Do List</h1>
-      <!-- <p>Add tasks, delete tasks, mark as completed, priority colors</p> -->
-    </header>
     <main>
-      <form id="newItem">
-        <input type="text" placeholder="new task">
-        <input type="radio" name="priority" value="low">
-        <input type="radio" name= "priority" value="medium">
-        <input type="radio" name="priority" value="high">
-        <input type="submit">
+      <h2>New Task</h2>
+
+      <form id="newTaskForm">
+        <div class="form-group">
+          <input type="text" id="newTask">
+        </div>
+        <div class="form-group">
+          <label for="priority">Priority Level: </label>
+          <input type="radio" name="priority" value="low"><span class='priority-level'>Low</span>
+          <input type="radio" name= "priority" value="medium"><span class='priority-level'>Medium</span>
+          <input type="radio" name="priority" value="high"><span class='priority-level'>High</span>
+        </div>
+        <div class="form-group">
+          <input type="submit">
+        </div>
       </form>
+
+      <h2>List</h2>
       <ul id="list">
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <li class='low-priority'><span class='task-text'>Item 1</span><button>Complete</button><button>Delete</button></li>
+        <li class='medium-priority'><span class='task-text'>Item 2</span><button>Complete</button><button>Delete</button></li>
+        <li class='high-priority'><span class='task-text'>Item 3</span><button>Complete</button><button>Delete</button></li>
       </ul>
     </main>
   </div>
