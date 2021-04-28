@@ -1,0 +1,25 @@
+* {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+header {
+  padding: 2em;
+  text-align: center;
+}
+
+form,
+ul {
+  padding: 2em;
+}
+ul {
+  list-style: none;
+}
