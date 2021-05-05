@@ -23,10 +23,10 @@
         <div class="form-group">
           <p>Priority Level: </p>
 
-          <input type="radio" name="priority" value="low" id='low-priority'>
+          <input type="radio" name="priority" value="low" id='low-priority' checked>
           <label name='priority' for='low-priority'>Low</label>
 
-          <input type="radio" name= "priority" value="medium" id='medium-priority'>
+          <input type="radio" name="priority" value="medium" id='medium-priority'>
           <label name='priority' for='medium-priority'>Medium</label>
 
           <input type="radio" name="priority" value="high" id='high-priority'>
@@ -40,24 +40,21 @@
       <h2>List</h2>
       <ul id="list">
         <li class='low-priority'>
-          <span class='task-text'>I have so many things i need to do but cant decide so will just keep typing.</span>
+          <span class='task-text'>This is a low-priority task</span>
           <div class="button-group">
-            <button>Complete</button>
-            <button>X</button>
+            <button>Complete</button><button class='button-margin-left'>X</button>
           </div>
         </li>
         <li class='medium-priority completed'>
-          <span class='task-text'>Item 2</span>
+          <span class='task-text'>This is a medium-priority task</span>
           <div class="button-group">
-            <button>Complete</button>
-            <button>X</button>
+            <button>Complete</button><button class='button-margin-left'>X</button>
           </div>
         </li>
         <li class='high-priority'>
-          <span class='task-text'>Item 3</span>
+          <span class='task-text'>This is a high-priority task</span>
           <div class="button-group">
-            <button>Complete</button>
-            <button>X</button>
+            <button>Complete</button><button class='button-margin-left'>X</button>
           </div>
         </li>
       </ul>
