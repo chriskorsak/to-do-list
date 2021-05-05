@@ -9,9 +9,11 @@ const list = document.querySelector('#list');
 showHideButton.addEventListener('click', showHide);
 
 function showHide() {
-  if (newTaskForm.style.display === 'none') {
-    newTaskForm.style.display = 'block';
-  } else {
+  if (newTaskForm.style.display === 'block') {
     newTaskForm.style.display = 'none';
+    showHideButton.textContent = 'New Task';
+  } else {
+    newTaskForm.style.display = 'block';
+    showHideButton.textContent = 'Hide';
   }
 }
