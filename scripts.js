@@ -67,6 +67,8 @@ function submitTask(event) {
   completeButton.textContent = 'Complete';
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'X';
+  deleteButton.classList = 'button-margin-left';
+
   buttonGroup.append(completeButton, deleteButton);
 
   //append button group to list item
