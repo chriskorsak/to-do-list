@@ -1,9 +1,29 @@
+//GLOBAL VARIABLES
+
 //shows/hides the new task form
 const showHideButton = document.querySelector('#showHideButton');
 //new task form
 const newTaskForm = document.querySelector('#newTaskForm');
 //list of tasks
 const list = document.querySelector('#list');
+//new task input
+const newTask = document.getElementById('newTask');
+//new task submit button
+const submitButton = document.getElementById('newTaskSubmit');
+
+//DISABLE SUBMIT BUTTON
+
+//disable submit button by default until input has text
+submitButton.disabled = true;
+newTask.addEventListener('keyup', function() {
+  if (newTask.value.length > 0) {
+    submitButton.disabled = false;
+  } else {
+    submitButton.disabled = true;
+  }
+})
+
+//EVENT HANDLERS
 
 //add click event to showHideButton
 showHideButton.addEventListener('click', showHide);
@@ -11,6 +31,8 @@ showHideButton.addEventListener('click', showHide);
 newTaskForm.addEventListener('submit', submitTask);
 // add click event to entire list
 list.addEventListener('click', completeDeleteTask);
+
+//FUNCTIONS
 
 // this will show or hide the new task form and change button text
 function showHide() {
@@ -28,8 +50,6 @@ function submitTask(event) {
   //prevent form from submitting to another page
   event.preventDefault();
 
-  //get new task input value
-  const newTask = document.getElementById('newTask');
   //get all radio buttons
   const radioGroup = document.querySelectorAll('input[name="priority"]');
   //loop through radio buttons to find checked radio and assign to priorityLevel variable
@@ -80,6 +100,8 @@ function submitTask(event) {
 
   //clear out new task input field
   newTask.value = '';
+  //disable submit button on new task form
+  submitButton.disabled = true;
 }
 
 function completeDeleteTask(event) {
