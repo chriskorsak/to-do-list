@@ -96,11 +96,11 @@ li {
 }
 
 li.low-priority {
-  background-color: #537378;
+  background-color: #2a525d;
 }
 
 li.medium-priority {
-  background-color: #2a525d;
+  background-color: #537378;
 }
 
 li.high-priority {
@@ -108,7 +108,7 @@ li.high-priority {
 }
 
 li.completed {
-  opacity: 30%;
+  opacity: 25%;
 }
 
 span.task-text {
