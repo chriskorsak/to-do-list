@@ -9,6 +9,8 @@ const list = document.querySelector('#list');
 showHideButton.addEventListener('click', showHide);
 // add submit event to new task form
 newTaskForm.addEventListener('submit', submitTask);
+// add click event to entire list
+list.addEventListener('click', completeDeleteTask);
 
 // this will show or hide the new task form and change button text
 function showHide() {
@@ -78,6 +80,20 @@ function submitTask(event) {
 
   //clear out new task input field
   newTask.value = '';
+}
+
+function completeDeleteTask(event) {
+  if (event.target.textContent === 'Complete') {
+    //get list item of clicked complete button
+    const li = event.target.parentElement.parentElement;
+    //lowers list element opacity
+    li.classList.add('completed');
+  }
+  if (event.target.textContent === 'X') {
+    //get list item of clicked delete button
+    const li = event.target.parentElement.parentElement;
+    list.removeChild(li);
+  }
 }
 
 
