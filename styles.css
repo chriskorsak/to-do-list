@@ -72,6 +72,14 @@ input[type='submit']:hover {
   background-color: #000;
 }
 
+input[type='submit']:disabled {
+  opacity: 50%;
+}
+
+input[type='submit']:disabled:hover {
+  background-color: #292929;
+}
+
 label {
   margin-right: 10px;
 }
