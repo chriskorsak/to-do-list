@@ -73,7 +73,7 @@ input[type='submit']:hover {
 }
 
 input[type='submit']:disabled {
-  opacity: 50%;
+  opacity: .5;
 }
 
 input[type='submit']:disabled:hover {
@@ -116,7 +116,7 @@ li.high-priority {
 }
 
 li.completed {
-  opacity: 25%;
+  opacity: .25;
 }
 
 span.task-text {
